@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello World</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'HelloWorld/css/style.css' %}">
+    <script src="{% static 'HelloWorld/javascript/main.js' %}"></script>
+</head>
+
+<body id="wrapper">
+    <h1 class="banner-heading">HelloWorld</h1>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <ul class="navbar navbar-default menubar">
+            <li class="navbar-text"><a href="/">Home</a></li>
+            <li><a href="/registration">Registration</a></li>
+        </ul>
+    </nav>
+    <section class="login-form">
+        <h3>Login to your account</h3>
+        <!-- <form>
+            {% csrf_token %} -->
+            <!-- <button class="facebook-login" type="submit"><a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a></button> -->
+            <div class="social-login"><a href="{% url 'social:begin' 'facebook' %}"><img src="../../static/HelloWorld/images/facebook.png" alt="" style="width:200px; height:40px;"></a></div>
+        <!-- </form> -->
+        <p> OR </p>
+        <form class="email_login" action="/log_in" method="POST">
+            {% csrf_token %}
+            <input type="text" placeholder="Email" name="email_form">
+            <input type="password" placeholder="Password" name="password_form">
+            <input type="submit" value="Sign-in  with Email">
+        </form>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </section>  
+</body>
+
+</html>

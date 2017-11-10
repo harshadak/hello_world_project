@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello World</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'HelloWorld/css/style.css' %}">
+    <script src="{% static 'HelloWorld/javascript/main.js' %}"></script>
+</head>
+
+<body id="wrapper">
+    <h1 class="banner-heading">HelloWorld</h1>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <ul class="navbar navbar-default menubar">
+            <li class="navbar-text"><a href="/">Home</a></li>
+            <li><a href="/login">Login</a></li>
+        </ul>
+    </nav>
+    <section class="login-form">
+        <h3>Register with Us</h3>
+        <form class="reg_form" action="/add" method="POST">
+            {% csrf_token %}
+            <p>First Name</p>
+            <input type='text' name="first_name_form">
+            <p>Last Name</p>
+            <input type='text' name="last_name_form">
+            <p>E-mail</p>
+            <input type='text' name="email_form">
+            <p>Password</p>
+            <input type='password' name="pass_form">
+            <p>Confirm Password</p>
+            <input type='password' name="conf_form">
+            <input type="submit" value="Submit">
+        </form>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    </section>
+      
+</body>
+
+</html>

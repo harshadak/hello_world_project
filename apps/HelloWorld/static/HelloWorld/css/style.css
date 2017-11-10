@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+
+#wrapper {
+    width: 1200px;
+    margin: 0px auto;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    /* background-color: black; */
+    /* z-index: -1;
+    opacity: 0.9; */
+    /* background: url("../../HelloWorld/images/transparent.jpg"); */
+}
+h1.banner-heading {
+    margin: 20px 711px 20px 13px;
+    display: inline-block;
+    font-family: monospace;
+    font-weight: 600;
+    font-size: 42px;
+}
+h1.banner-heading span {
+    color: #3399CC;
+}
+
+.greeting {
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: right;
+    vertical-align: -79%;
+}
+
+/* Navbar styles */
+
+nav {
+    width: 100%;
+}
+.navbar {
+    padding: 0;
+}
+.menubar {
+    background-color: #333333;
+    text-align: center;
+    padding: 10px;
+    width: 1125px;
+}
+.menubar li {
+    display: inline-block;
+    margin: 0px 74px;
+}
+.menubar li a,
+div.state_container li a {
+    color: white;
+}
+.search-bar {
+    background-color: #dbdcdd;
+    margin-top: -16px;
+    margin-bottom: 40px;
+}
+/* .search-bar input {
+    margin-right: 10px;
+} */
+.search-bar input[type=text] {
+    height: 36px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+    /* border-radius: 2px; */
+    padding: 0 8px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+}
+.search-bar input[type=submit] {
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    border: 0px;
+    color: #fff;
+    text-shadow: 0 1px rgba(0,0,0,0.1); 
+    /* background-color: #4d90fe; */
+    padding: 10px 8px;
+    font-size: 15px;
+}
+/* .facebook-login {
+    background-image: url("../../static/HelloWorld/images/facebook.png");
+}  */
+/* Main content styles */
+
+.main-content {
+    display: inline-block;
+    margin-right: 10px;
+    width: 55%;
+}
+div.state_container {
+    padding: 10px;
+    background-color: #999999;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+    margin-bottom: 20px;
+}
+ol {
+    list-style: none;
+}
+.state-info {
+    padding: 10px;
+    border: 1px solid black;
+    height: 250px;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+}
+.jobs {
+    padding: 10px;
+    color: white;
+    background-color: #3399CC;
+    display: inline-block;
+    width: 37.5%;
+    height: 775px;
+    vertical-align: top;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+    overflow-y: scroll;
+}
+.jobs h4,
+.jobs_show h4 {
+    font-size: 22px;
+}
+.jobs a,
+.jobs_show a{
+    color: #006699;
+}
+.jobs h3,
+.jobs_show h3 {
+     font-size: 32px; 
+}
+h5,
+.job_location {
+	display: inline-block;
+    margin-bottom: 0px;
+}
+.job_date {
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+    display: inline-block;
+    margin-right:226px;
+    vertical-align: 100%
+}
+.save_job {
+    vertical-align: -14%;
+    display: inline-block;
+    vertical-align: 100%;
+}
+
+/* Login styles */
+.login-form {
+    margin: 0 auto;
+    /* from template */
+    padding: 30px;
+    max-width: 400px;
+    width: 100% !important;
+    background-color: #F7F7F7;
+    border-radius: 2px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin-top: 20px;
+}
+.social-login, .login-form p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.login-form p {
+    font-weight: 600;
+}
+.login-form h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.login-form input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.login-form input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  /* background-color: #4d90fe; */
+  padding: 15px 0px;
+  font-family: roboto;
+  font-size: 18px;
+}
+.login-form input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+.email_login input,
+.reg_form input{
+    display: block;
+}
+.email_login input{
+    margin-top: 6px;
+}
+.job2 {
+    margin-left: 219px;
+}
+.jobs_show {
+    padding: 10px;
+    color: white;
+    background-color: #3399CC;
+    display: inline-block;
+    width: 95%;
+    height: 775px;
+    vertical-align: top;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+    overflow-y: scroll;
+}
